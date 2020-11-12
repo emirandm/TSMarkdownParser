@@ -252,6 +252,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C7CDC317255D2FE100BCDB17 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C733B469527BABC08D90D /* TSMarkdownParser */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C7CDC318255D303800BCDB17 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C750B1D35A760ECC29C14 /* TSMarkdownParserTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C7CDC351255D845E00BCDB17 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C79659073897FDCACEC17 /* TSMarkdownParser.h */,
+				CC3C7B7AEA9B50B9BF782FC5 /* TSMarkdownParser.m */,
+				C81B78CF1C5483DF00A1DE36 /* TSBaseParser.h */,
+				C81B78D01C5483DF00A1DE36 /* TSBaseParser.m */,
+				C824BD0A1CB8DD1B00E9E299 /* module.modulemap */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
 		C81B78DB1C54B4B800A1DE36 /* TSMarkdownParserExample iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,14 +307,14 @@
 		CC3C710FA5AE7D712CE7B74D = {
 			isa = PBXGroup;
 			children = (
+				C7CDC317255D2FE100BCDB17 /* Sources */,
+				C7CDC318255D303800BCDB17 /* Tests */,
 				F5A4F4431B36EF4100C4F56C /* TSMarkdownParserFramework */,
 				C81B78DB1C54B4B800A1DE36 /* TSMarkdownParserExample iOS */,
 				3700F5811CAA637C0034AE2D /* TSMarkdownParserExample tvOS */,
 				3700F5991CAA63F90034AE2D /* TSMarkdownParserExample OSX */,
 				CC3C75D2B9DE7B5A7C239205 /* Products */,
 				CC3C7D316168D5FD2480BED2 /* Frameworks */,
-				CC3C733B469527BABC08D90D /* TSMarkdownParser */,
-				CC3C750B1D35A760ECC29C14 /* TSMarkdownParserTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,13 +329,10 @@
 		CC3C733B469527BABC08D90D /* TSMarkdownParser */ = {
 			isa = PBXGroup;
 			children = (
+				C7CDC351255D845E00BCDB17 /* include */,
 				C824BD0C1CB8EE6100E9E299 /* CHANGELOG.md */,
 				F6F149C11A7CFB4200A24213 /* TSMarkdownParser.podspec */,
 				CC3C72A1BA2FA83330E38DEB /* Supporting Files */,
-				CC3C79659073897FDCACEC17 /* TSMarkdownParser.h */,
-				CC3C7B7AEA9B50B9BF782FC5 /* TSMarkdownParser.m */,
-				C81B78CF1C5483DF00A1DE36 /* TSBaseParser.h */,
-				C81B78D01C5483DF00A1DE36 /* TSBaseParser.m */,
 			);
 			path = TSMarkdownParser;
 			sourceTree = "<group>";
@@ -363,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				F5A4F4451B36EF4100C4F56C /* Info.plist */,
-				C824BD0A1CB8DD1B00E9E299 /* module.modulemap */,
 			);
 			path = TSMarkdownParserFramework;
 			sourceTree = "<group>";
@@ -574,6 +598,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -891,7 +916,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "TSMarkdownParserExample iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserExample-iOS";
@@ -911,7 +936,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "TSMarkdownParserExample iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserExample-iOS";
@@ -936,7 +961,7 @@
 				INFOPLIST_FILE = TSMarkdownParserFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = TSMarkdownParserFramework/module.modulemap;
+				MODULEMAP_FILE = Sources/TSMarkdownParser/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserFramework-tvOS";
 				PRODUCT_NAME = TSMarkdownParser;
@@ -966,7 +991,7 @@
 				INFOPLIST_FILE = TSMarkdownParserFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = TSMarkdownParserFramework/module.modulemap;
+				MODULEMAP_FILE = Sources/TSMarkdownParser/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserFramework-tvOS";
 				PRODUCT_NAME = TSMarkdownParser;
@@ -999,7 +1024,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MODULEMAP_FILE = TSMarkdownParserFramework/module.modulemap;
+				MODULEMAP_FILE = Sources/TSMarkdownParser/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserFramework-OSX";
 				PRODUCT_NAME = TSMarkdownParser;
@@ -1031,7 +1056,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MODULEMAP_FILE = TSMarkdownParserFramework/module.modulemap;
+				MODULEMAP_FILE = Sources/TSMarkdownParser/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserFramework-OSX";
 				PRODUCT_NAME = TSMarkdownParser;
@@ -1047,7 +1072,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/TSMarkdownParser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TSMarkdownParser;
 				SKIP_INSTALL = YES;
@@ -1058,9 +1083,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSMarkdownParser/TSMarkdownParser-Prefix.pch";
-				INFOPLIST_FILE = "TSMarkdownParserTests/TSMarkdownParserTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				INFOPLIST_FILE = "Tests/TSMarkdownParserTests/TSMarkdownParserTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = TSMarkdownParser;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1112,7 +1137,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1127,7 +1152,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/TSMarkdownParser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TSMarkdownParser;
 				SKIP_INSTALL = YES;
@@ -1173,7 +1198,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = iphoneos;
@@ -1187,9 +1212,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSMarkdownParser/TSMarkdownParser-Prefix.pch";
-				INFOPLIST_FILE = "TSMarkdownParserTests/TSMarkdownParserTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				INFOPLIST_FILE = "Tests/TSMarkdownParserTests/TSMarkdownParserTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = TSMarkdownParser;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1213,9 +1238,9 @@
 				);
 				INFOPLIST_FILE = TSMarkdownParserFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = TSMarkdownParserFramework/module.modulemap;
+				MODULEMAP_FILE = Sources/TSMarkdownParser/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserFramework-iOS";
 				PRODUCT_NAME = TSMarkdownParser;
@@ -1241,9 +1266,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = TSMarkdownParserFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = TSMarkdownParserFramework/module.modulemap;
+				MODULEMAP_FILE = Sources/TSMarkdownParser/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.computertalk.TSMarkdownParserFramework-iOS";
 				PRODUCT_NAME = TSMarkdownParser;
