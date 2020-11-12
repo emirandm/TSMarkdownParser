@@ -1,4 +1,5 @@
-module TSMarkdownParser {
-    header "TSMarkdownParser.h"
+framework module TSMarkdownParser {
+    umbrella header "TSMarkdownParser.h"
     export *
+    module * { export * }
 }

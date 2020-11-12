@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <UIKit/UIKit.h>
-#import "TSMarkdownParser.h"
+#import "../../Sources/TSMarkdownParser/include/TSMarkdownParser.h"
 
 @interface TSMarkdownParserTests : XCTestCase
 

@@ -22,6 +22,10 @@ let package = Package(
         .target(
             name: "TSMarkdownParser",
             dependencies: [],
-            path: "Sources")
+            path: "Sources"),
+        .testTarget(
+            name: "TSMarkdownParserTests",
+            dependencies: ["TSMarkdownParser"],
+            path: "Tests"),
     ]
 )
