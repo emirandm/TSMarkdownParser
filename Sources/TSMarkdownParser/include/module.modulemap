@@ -1,0 +1,4 @@
+module TSMarkdownParser {
+    header "TSMarkdownParser.h"
+    export *
+}

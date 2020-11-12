@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Computertalk Sweden. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 
 #import "TSBaseParser.h"
 
