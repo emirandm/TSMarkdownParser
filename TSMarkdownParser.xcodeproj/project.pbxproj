@@ -104,6 +104,7 @@
 		3700F5A31CAA63F90034AE2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3700F5A61CAA63F90034AE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3700F5A81CAA63F90034AE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C79F07D3255E88BD00A9F0E8 /* TSMarkdownParser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSMarkdownParser-Bridging-Header.h"; sourceTree = "<group>"; };
 		C81B78CF1C5483DF00A1DE36 /* TSBaseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBaseParser.h; sourceTree = "<group>"; };
 		C81B78D01C5483DF00A1DE36 /* TSBaseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBaseParser.m; sourceTree = "<group>"; };
 		C81B78DA1C54B4B800A1DE36 /* TSMarkdownParserExample iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TSMarkdownParserExample iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +251,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C79F07D2255E886D00A9F0E8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C79F07D3255E88BD00A9F0E8 /* TSMarkdownParser-Bridging-Header.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		C7CDC317255D2FE100BCDB17 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +313,7 @@
 		CC3C710FA5AE7D712CE7B74D = {
 			isa = PBXGroup;
 			children = (
+				C79F07D2255E886D00A9F0E8 /* Headers */,
 				C7CDC317255D2FE100BCDB17 /* Sources */,
 				C7CDC318255D303800BCDB17 /* Tests */,
 				F5A4F4431B36EF4100C4F56C /* TSMarkdownParserFramework */,

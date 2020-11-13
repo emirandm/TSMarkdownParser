@@ -1,5 +1,5 @@
 module TSMarkdownParser {
-    header "/include/TSMarkdownParser.h"
+    header "../../Headers/TSMarkdownParser-Bridging-Header.h"
     link "TSMarkdownParser"
     export *
 }
