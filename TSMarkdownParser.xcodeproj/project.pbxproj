@@ -116,7 +116,6 @@
 		C81B78E81C54B4B800A1DE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C81B78EB1C54B4B800A1DE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81B78ED1C54B4B800A1DE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C824BD0A1CB8DD1B00E9E299 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C824BD0C1CB8EE6100E9E299 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
 		C8414BB81CB113A1000C7921 /* TSMarkdownParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSMarkdownParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8414BC51CB114BC000C7921 /* TSMarkdownParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSMarkdownParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +132,6 @@
 		CC3C7991CED6A71640007C6A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CC3C7ACA2B52954F32B183DD /* TSMarkdownParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "TSMarkdownParserTests-Info.plist"; sourceTree = "<group>"; };
 		CC3C7B7AEA9B50B9BF782FC5 /* TSMarkdownParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSMarkdownParser.m; sourceTree = "<group>"; };
-		CC3C7D01D183A61FD440A876 /* TSMarkdownParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSMarkdownParser-Prefix.pch"; sourceTree = "<group>"; };
 		CF40360C1BA06F0600C67594 /* markdown_test_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markdown_test_image.png; sourceTree = "<group>"; };
 		F5A4F4421B36EF4100C4F56C /* TSMarkdownParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSMarkdownParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A4F4451B36EF4100C4F56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 				CC3C7B7AEA9B50B9BF782FC5 /* TSMarkdownParser.m */,
 				C81B78CF1C5483DF00A1DE36 /* TSBaseParser.h */,
 				C81B78D01C5483DF00A1DE36 /* TSBaseParser.m */,
-				C824BD0A1CB8DD1B00E9E299 /* module.modulemap */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -318,21 +315,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		CC3C72A1BA2FA83330E38DEB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CC3C7D01D183A61FD440A876 /* TSMarkdownParser-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		CC3C733B469527BABC08D90D /* TSMarkdownParser */ = {
 			isa = PBXGroup;
 			children = (
 				C7CDC381255DD45D00BCDB17 /* include */,
 				C824BD0C1CB8EE6100E9E299 /* CHANGELOG.md */,
 				F6F149C11A7CFB4200A24213 /* TSMarkdownParser.podspec */,
-				CC3C72A1BA2FA83330E38DEB /* Supporting Files */,
 			);
 			path = TSMarkdownParser;
 			sourceTree = "<group>";
@@ -1072,7 +1060,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/TSMarkdownParser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TSMarkdownParser;
 				SKIP_INSTALL = YES;
@@ -1083,7 +1071,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "Tests/TSMarkdownParserTests/TSMarkdownParserTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = TSMarkdownParser;
@@ -1152,7 +1140,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/TSMarkdownParser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TSMarkdownParser;
 				SKIP_INSTALL = YES;
@@ -1212,7 +1200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sources/TSMarkdownParser/TSMarkdownParser-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "Tests/TSMarkdownParserTests/TSMarkdownParserTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = TSMarkdownParser;
